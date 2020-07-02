@@ -130,55 +130,21 @@
             <h2 class="font-weight-bold">Chung cư mini</h2>
             <hr class="divider bg-saffron">
             <div class="row">
-              <div class="col-md-6 col-lg-4"><img class="img-fluid d-inline-block" src="{{asset('images/home-img-01-442-280.jpg')}}" width="370" height="250" alt="">
-                <div class="text-md-left offset-top-24">
-                  <div>
-                    <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">AVA Nob Hill</a></h5>
-                  </div>
-                  <h6 class="offset-top-10"> $1199.00/mon</h6>
-                  <ul class="list-inline list-inline-dotted text-dark">
-                    <li class="list-inline-item">1200 sq ft</li>
-                    <li class="list-inline-item">4 bedrooms</li>
-                    <li class="list-inline-item">2 bathrooms</li>
-                  </ul>
-                  <div>
-                    <p>AVA Nob Hill includes studios and 1 and 2 bedroom apartments that feature an urban-inspired design that extends beyond your walls and throughout the entire community.</p>
-                  </div>
-                </div>
-              </div>
+            @foreach($apartment as $value)
               <div class="col-md-6 col-lg-4 offset-top-66 offset-md-top-0"><img class="img-fluid d-inline-block" src="{{asset('images/home-img-01-442-280.jpg')}}" width="370" height="250" alt="">
-                <div class="text-md-left offset-top-24">
-                  <div>
-                    <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">Ashton San Francisco</a></h5>
-                  </div>
-                  <h6 class="offset-top-10"> $1595.00/mon</h6>
-                  <ul class="list-inline list-inline-dotted text-dark">
-                    <li class="list-inline-item">1200 sq ft</li>
-                    <li class="list-inline-item">2 bedrooms</li>
-                    <li class="list-inline-item">2 bathrooms</li>
-                  </ul>
-                  <div>
-                    <p>Ashton San Francisco offers luxury apartments, eco-friendly features, and remarkable on-site resident amenities. Enjoy premier services and access to our state-of-the-art fitness center, clubhouse, business center, and outdoor fire pit lounge.</p>
+                  <div class="text-md-left offset-top-24">
+                    <div>
+                      <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">{{$value->title}}</a></h5>
+                    </div>
+                    <h6 class="offset-top-10"> {{ number_format($value->price, 0, ',', '.') }} VNĐ / Tháng</h6>
+                    <p>{{$value->description}}</p>
+                    <ul class="list-inline list-inline-dotted text-dark">
+                      <li class="list-inline-item">{{$value->address}}</li>
+                    </ul>
+                    <hr/>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-6 col-lg-4 offset-top-66 offset-lg-top-0"><img class="img-fluid d-inline-block" src="{{asset('images/home-img-01-442-280.jpg')}}" width="370" height="250" alt="">
-                <div class="text-md-left offset-top-24">
-                  <div>
-                    <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">The Presidio Residences</a></h5>
-                  </div>
-                  <h6 class="offset-top-10"> $2699.00/mon</h6>
-                  <ul class="list-inline list-inline-dotted text-dark">
-                    <li class="list-inline-item">2200 sq ft</li>
-                    <li class="list-inline-item">4 bedrooms</li>
-                    <li class="list-inline-item">3 bathrooms</li>
-                  </ul>
-                  <div>
-                    <p>The Presidio Residences offer a unique opportunity to live in a national park setting and enjoy quiet neighborhoods, convenient location, beautiful open spaces, and outstanding recreational amenities.</p>
-                  </div>
-                </div>
-              </div>
-            
+            @endforeach
             </div>
             <div class="offset-top-50"><a class="btn btn-primary" href="catalog.html">Xem thêm</a></div>
           </div>
@@ -188,54 +154,22 @@
             <h2 class="font-weight-bold">Phòng trọ</h2>
             <hr class="divider bg-saffron">
             <div class="row">
+            @foreach($motel as $value)
               <div class="col-md-6 col-lg-4"><img class="img-fluid d-inline-block" src="{{asset('images/home-img-01-442-280.jpg')}}" width="370" height="250" alt="">
-                <div class="text-md-left offset-top-24">
-                  <div>
-                    <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">AVA Nob Hill</a></h5>
-                  </div>
-                  <h6 class="offset-top-10"> $1199.00/mon</h6>
-                  <ul class="list-inline list-inline-dotted text-dark">
-                    <li class="list-inline-item">1200 sq ft</li>
-                    <li class="list-inline-item">4 bedrooms</li>
-                    <li class="list-inline-item">2 bathrooms</li>
-                  </ul>
-                  <div>
-                    <p>AVA Nob Hill includes studios and 1 and 2 bedroom apartments that feature an urban-inspired design that extends beyond your walls and throughout the entire community.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 offset-top-66 offset-md-top-0"><img class="img-fluid d-inline-block" src="{{asset('images/home-img-01-442-280.jpg')}}" width="370" height="250" alt="">
-                <div class="text-md-left offset-top-24">
-                  <div>
-                    <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">Ashton San Francisco</a></h5>
-                  </div>
-                  <h6 class="offset-top-10"> $1595.00/mon</h6>
-                  <ul class="list-inline list-inline-dotted text-dark">
-                    <li class="list-inline-item">1200 sq ft</li>
-                    <li class="list-inline-item">2 bedrooms</li>
-                    <li class="list-inline-item">2 bathrooms</li>
-                  </ul>
-                  <div>
-                    <p>Ashton San Francisco offers luxury apartments, eco-friendly features, and remarkable on-site resident amenities. Enjoy premier services and access to our state-of-the-art fitness center, clubhouse, business center, and outdoor fire pit lounge.</p>
+                  <div class="text-md-left offset-top-24">
+                    <div>
+                      <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">{{$value->title}}</a></h5>
+                    </div>
+                    <h6 class="offset-top-10"> {{ number_format($value->price, 0, ',', '.') }} VNĐ/ Tháng</h6>
+                    <ul class="list-inline list-inline-dotted text-dark">
+                      <li class="list-inline-item">{{$value->address}}</li>
+                    </ul>
+                    <div>
+                      <p>{{$value->description}}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-6 col-lg-4 offset-top-66 offset-lg-top-0"><img class="img-fluid d-inline-block" src="{{asset('images/home-img-01-442-280.jpg')}}" width="370" height="250" alt="">
-                <div class="text-md-left offset-top-24">
-                  <div>
-                    <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">The Presidio Residences</a></h5>
-                  </div>
-                  <h6 class="offset-top-10"> $2699.00/mon</h6>
-                  <ul class="list-inline list-inline-dotted text-dark">
-                    <li class="list-inline-item">2200 sq ft</li>
-                    <li class="list-inline-item">4 bedrooms</li>
-                    <li class="list-inline-item">3 bathrooms</li>
-                  </ul>
-                  <div>
-                    <p>The Presidio Residences offer a unique opportunity to live in a national park setting and enjoy quiet neighborhoods, convenient location, beautiful open spaces, and outstanding recreational amenities.</p>
-                  </div>
-                </div>
-              </div>
+            @endforeach
             
             </div>
             <div class="offset-top-50"><a class="btn btn-primary" href="catalog.html">Xem thêm</a></div>
@@ -246,54 +180,22 @@
             <h2 class="font-weight-bold">Mặt bằng</h2>
             <hr class="divider bg-saffron">
             <div class="row">
+            @foreach($planes as $value)
               <div class="col-md-6 col-lg-4"><img class="img-fluid d-inline-block" src="{{asset('images/home-img-01-442-280.jpg')}}" width="370" height="250" alt="">
-                <div class="text-md-left offset-top-24">
-                  <div>
-                    <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">AVA Nob Hill</a></h5>
-                  </div>
-                  <h6 class="offset-top-10"> $1199.00/mon</h6>
-                  <ul class="list-inline list-inline-dotted text-dark">
-                    <li class="list-inline-item">1200 sq ft</li>
-                    <li class="list-inline-item">4 bedrooms</li>
-                    <li class="list-inline-item">2 bathrooms</li>
-                  </ul>
-                  <div>
-                    <p>AVA Nob Hill includes studios and 1 and 2 bedroom apartments that feature an urban-inspired design that extends beyond your walls and throughout the entire community.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 offset-top-66 offset-md-top-0"><img class="img-fluid d-inline-block" src="{{asset('images/home-img-01-442-280.jpg')}}" width="370" height="250" alt="">
-                <div class="text-md-left offset-top-24">
-                  <div>
-                    <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">Ashton San Francisco</a></h5>
-                  </div>
-                  <h6 class="offset-top-10"> $1595.00/mon</h6>
-                  <ul class="list-inline list-inline-dotted text-dark">
-                    <li class="list-inline-item">1200 sq ft</li>
-                    <li class="list-inline-item">2 bedrooms</li>
-                    <li class="list-inline-item">2 bathrooms</li>
-                  </ul>
-                  <div>
-                    <p>Ashton San Francisco offers luxury apartments, eco-friendly features, and remarkable on-site resident amenities. Enjoy premier services and access to our state-of-the-art fitness center, clubhouse, business center, and outdoor fire pit lounge.</p>
+                  <div class="text-md-left offset-top-24">
+                    <div>
+                      <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">{{$value->title}}</a></h5>
+                    </div>
+                    <h6 class="offset-top-10"> {{ number_format($value->price, 0, ',', '.') }} VNĐ/ Tháng</h6>
+                    <ul class="list-inline list-inline-dotted text-dark">
+                      <li class="list-inline-item">{{$value->address}}</li>
+                    </ul>
+                    <div>
+                      <p>{{$value->description}}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-6 col-lg-4 offset-top-66 offset-lg-top-0"><img class="img-fluid d-inline-block" src="{{asset('images/home-img-01-442-280.jpg')}}" width="370" height="250" alt="">
-                <div class="text-md-left offset-top-24">
-                  <div>
-                    <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">The Presidio Residences</a></h5>
-                  </div>
-                  <h6 class="offset-top-10"> $2699.00/mon</h6>
-                  <ul class="list-inline list-inline-dotted text-dark">
-                    <li class="list-inline-item">2200 sq ft</li>
-                    <li class="list-inline-item">4 bedrooms</li>
-                    <li class="list-inline-item">3 bathrooms</li>
-                  </ul>
-                  <div>
-                    <p>The Presidio Residences offer a unique opportunity to live in a national park setting and enjoy quiet neighborhoods, convenient location, beautiful open spaces, and outstanding recreational amenities.</p>
-                  </div>
-                </div>
-              </div>
+            @endforeach
             
             </div>
             <div class="offset-top-50"><a class="btn btn-primary" href="catalog.html">Xem thêm</a></div>
@@ -304,54 +206,22 @@
             <h2 class="font-weight-bold">Nhà dịch vụ</h2>
             <hr class="divider bg-saffron">
             <div class="row">
+            @foreach($service_house as $value)
               <div class="col-md-6 col-lg-4"><img class="img-fluid d-inline-block" src="{{asset('images/home-img-01-442-280.jpg')}}" width="370" height="250" alt="">
-                <div class="text-md-left offset-top-24">
-                  <div>
-                    <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">AVA Nob Hill</a></h5>
-                  </div>
-                  <h6 class="offset-top-10"> $1199.00/mon</h6>
-                  <ul class="list-inline list-inline-dotted text-dark">
-                    <li class="list-inline-item">1200 sq ft</li>
-                    <li class="list-inline-item">4 bedrooms</li>
-                    <li class="list-inline-item">2 bathrooms</li>
-                  </ul>
-                  <div>
-                    <p>AVA Nob Hill includes studios and 1 and 2 bedroom apartments that feature an urban-inspired design that extends beyond your walls and throughout the entire community.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 offset-top-66 offset-md-top-0"><img class="img-fluid d-inline-block" src="{{asset('images/home-img-01-442-280.jpg')}}" width="370" height="250" alt="">
-                <div class="text-md-left offset-top-24">
-                  <div>
-                    <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">Ashton San Francisco</a></h5>
-                  </div>
-                  <h6 class="offset-top-10"> $1595.00/mon</h6>
-                  <ul class="list-inline list-inline-dotted text-dark">
-                    <li class="list-inline-item">1200 sq ft</li>
-                    <li class="list-inline-item">2 bedrooms</li>
-                    <li class="list-inline-item">2 bathrooms</li>
-                  </ul>
-                  <div>
-                    <p>Ashton San Francisco offers luxury apartments, eco-friendly features, and remarkable on-site resident amenities. Enjoy premier services and access to our state-of-the-art fitness center, clubhouse, business center, and outdoor fire pit lounge.</p>
+                  <div class="text-md-left offset-top-24">
+                    <div>
+                      <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">{{$value->title}}</a></h5>
+                    </div>
+                    <h6 class="offset-top-10"> {{ number_format($value->price, 0, ',', '.') }} VNĐ/ Tháng</h6>
+                    <ul class="list-inline list-inline-dotted text-dark">
+                      <li class="list-inline-item">{{$value->address}}</li>
+                    </ul>
+                    <div>
+                      <p>{{$value->description}}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-6 col-lg-4 offset-top-66 offset-lg-top-0"><img class="img-fluid d-inline-block" src="{{asset('images/home-img-01-442-280.jpg')}}" width="370" height="250" alt="">
-                <div class="text-md-left offset-top-24">
-                  <div>
-                    <h5 class="font-weight-bold text-primary"><a href="single-property-page.html">The Presidio Residences</a></h5>
-                  </div>
-                  <h6 class="offset-top-10"> $2699.00/mon</h6>
-                  <ul class="list-inline list-inline-dotted text-dark">
-                    <li class="list-inline-item">2200 sq ft</li>
-                    <li class="list-inline-item">4 bedrooms</li>
-                    <li class="list-inline-item">3 bathrooms</li>
-                  </ul>
-                  <div>
-                    <p>The Presidio Residences offer a unique opportunity to live in a national park setting and enjoy quiet neighborhoods, convenient location, beautiful open spaces, and outstanding recreational amenities.</p>
-                  </div>
-                </div>
-              </div>
+            @endforeach
             
             </div>
             <div class="offset-top-50"><a class="btn btn-primary" href="catalog.html">Xem thêm</a></div>
