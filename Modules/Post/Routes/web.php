@@ -12,5 +12,10 @@
 */
 
 Route::prefix('post')->group(function() {
-    Route::get('/', 'PostController@index');
+    Route::get('/chung-cu-mini', 'PostController@Apartments')->name('chung-cu-mini');
+    Route::get('/mat-bang', 'PostController@Planes')->name('mat-bang');
+    Route::get('/phong-tro', 'PostController@Motel')->name('phong-tro');
+    Route::get('/nha-dich-vu', 'PostController@HouseService')->name('nha-dich-vu');
+    Route::get('/{slug}/{id}', 'PostController@show');
 });
+

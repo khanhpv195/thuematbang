@@ -42621,3 +42621,15 @@ body
 	color:#ffffff !important;
 
 }*/
+a:hover{
+    color:#ffa200 ;
+}
+
+@media only screen and (min-width: 1281px) {
+    .item {
+        margin-bottom: 2em !important;
+    }
+}
+a{
+    cursor: pointer;
+}

@@ -13,6 +13,6 @@ $factory->define(Post::class, function (Faker $faker) {
         'address' => Str::random(10),
         'thumbnail' => 'http://127.0.0.1:8000/images/home-img-01-442-280.jpg',
         'price' => 10000,
-        'cate_id' => 4,
+        'cate_id' => 3,
     ];
 });

@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PostController@index');
+Route::get('/', 'MainController@index');
+Route::get('/contact', 'MainController@contact')->name('contact');
 
 Auth::routes();
 
